@@ -1,0 +1,8 @@
+//
+// Prefix header for all source files of the 'ITMac' target in the 'ITMac' project.
+//
+
+#ifdef __OBJC__
+	#import <Cocoa/Cocoa.h>
+	#import <ITFoundation/ITFoundation.h>
+#endif
