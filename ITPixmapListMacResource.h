@@ -12,7 +12,7 @@
  */
 
 #import <Foundation/Foundation.h>
-#import "ITMacResource.h"
+#import <ITMac/ITMacResource.h>
 
 @interface ITPixmapListMacResource : ITMacResource {
 

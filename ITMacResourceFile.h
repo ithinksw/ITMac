@@ -13,7 +13,7 @@
 
 #import <Foundation/Foundation.h>
 #import <Carbon/Carbon.h>
-#import "ITMacResource.h"
+#import <ITMac/ITMacResource.h>
 
 @interface ITMacResourceFile : NSObject {
 	FSRef _fileReference;
