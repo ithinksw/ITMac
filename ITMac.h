@@ -12,3 +12,8 @@
  */
 
 #import <Cocoa/Cocoa.h>
+
+#import <ITMac/ITAppleEventTools.h>
+#import <ITMac/ITMacResource.h>
+#import <ITMac/ITMacResourceFile.h>
+#import <ITMac/ITCategory-NSAppleEventDescriptor.h>
