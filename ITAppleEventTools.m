@@ -30,11 +30,13 @@ NSAppleEventDescriptor *ITSendAE(FourCharCode eClass, FourCharCode eID, const Pr
 	}
 	
 	err = AESend(&event, &reply, kAENoReply, kAENormalPriority, /*kAEDefaultTimeout*/60, NULL, NULL);
+	AEDisposeDesc(&dest);
+	AEDisposeDesc(&event);
 	
 	if (err) {
+		AEDisposeDesc(&reply);
 		return nil;
 	}
-	
 	return [[[NSAppleEventDescriptor alloc] initWithAEDescNoCopy:&reply] autorelease];
 }
 
@@ -65,6 +67,7 @@ NSAppleEventDescriptor *ITSendAEWithString(NSString *sendString, FourCharCode ev
 	}
 	
 	err = AESend(&sendEvent, &replyEvent, kAEWaitReply, kAENormalPriority, /*kAEDefaultTimeout*/60, NULL, NULL);
+	AEDisposeDesc(&sendEvent);
 	
 	if (err) {
 		ITDebugLog(@"ITSendAEWithString(%@, %@, %@, {%i, %i}): Send Error: %i", sendString, NSStringFromFourCharCode(evClass), NSStringFromFourCharCode(evID), psn->highLongOfPSN, psn->lowLongOfPSN, err);
@@ -74,11 +77,12 @@ NSAppleEventDescriptor *ITSendAEWithString(NSString *sendString, FourCharCode ev
 	err = AESizeOfParam(&replyEvent, keyDirectObject, &resultType, &resultSize);
 	
 	if (resultSize == 0 || err != 0) {
+		AEDisposeDesc(&replyEvent);
 		return nil;
 	}
 	
 	AEGetParamDesc(&replyEvent, keyDirectObject, resultType, &resultDesc);
-	
+	AEDisposeDesc(&replyEvent);
 	return [[[NSAppleEventDescriptor alloc] initWithAEDescNoCopy:&resultDesc] autorelease];
 }
 
@@ -108,6 +112,7 @@ NSAppleEventDescriptor *ITSendAEWithStringAndObject(NSString *sendString, const 
 	AEPutParamDesc(&sendEvent, keyDirectObject, object);
 	
 	err = AESend(&sendEvent, &replyEvent, kAEWaitReply, kAENormalPriority, /*kAEDefaultTimeout*/60, NULL, NULL);
+	AEDisposeDesc(&sendEvent);
 	
 	if (err) {
 		ITDebugLog(@"ITSendAEWithStringAndObject(%@, <%@>, %@, %@, {%i, %i}): Send Error: %i", sendString, _ITAEDescCarbonDescription(*object), NSStringFromFourCharCode(evClass), NSStringFromFourCharCode(evID), psn->highLongOfPSN, psn->lowLongOfPSN, err);
@@ -117,10 +122,11 @@ NSAppleEventDescriptor *ITSendAEWithStringAndObject(NSString *sendString, const 
 	err = AESizeOfParam(&replyEvent, keyDirectObject, &resultType, &resultSize);
 	
 	if (resultSize == 0 || err != 0) {
+		AEDisposeDesc(&replyEvent);
 		return nil;
 	}
 	
 	AEGetParamDesc(&replyEvent, keyDirectObject, resultType, &resultDesc);
-	
+	AEDisposeDesc(&replyEvent);
 	return [[[NSAppleEventDescriptor alloc] initWithAEDescNoCopy:&resultDesc] autorelease];
 }
