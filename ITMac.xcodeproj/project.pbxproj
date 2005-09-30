@@ -53,14 +53,14 @@
 /* Begin PBXContainerItemProxy section */
 		7C8250B407FB265900147948 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 7C8250A607FB263900147948 /* ITFoundation.xcode */;
+			containerPortal = 7C8250A607FB263900147948 /* ITFoundation.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 8DC2EF5B0486A6940098B216;
 			remoteInfo = ITFoundation;
 		};
 		7C8250BA07FB267400147948 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 7C8250A607FB263900147948 /* ITFoundation.xcode */;
+			containerPortal = 7C8250A607FB263900147948 /* ITFoundation.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
 			remoteInfo = ITFoundation;
@@ -75,7 +75,7 @@
 		32DBCF5E0370ADEE00C91783 /* ITMac_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITMac_Prefix.pch; sourceTree = "<group>"; };
 		7C04624E0801E23100433407 /* ITPixmapListMacResource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITPixmapListMacResource.h; sourceTree = "<group>"; };
 		7C04624F0801E23100433407 /* ITPixmapListMacResource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITPixmapListMacResource.m; sourceTree = "<group>"; };
-		7C8250A607FB263900147948 /* ITFoundation.xcode */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ITFoundation.xcode; path = ../ITFoundation/ITFoundation.xcode; sourceTree = SOURCE_ROOT; };
+		7C8250A607FB263900147948 /* ITFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ITFoundation.xcodeproj; path = ../ITFoundation/ITFoundation.xcodeproj; sourceTree = SOURCE_ROOT; };
 		7C8250C807FB272900147948 /* ITMac.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITMac.h; sourceTree = "<group>"; };
 		7C8250DF07FB286500147948 /* ITAppleEventTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ITAppleEventTools.h; sourceTree = "<group>"; };
 		7C8250E007FB286500147948 /* ITAppleEventTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ITAppleEventTools.m; sourceTree = "<group>"; };
@@ -133,7 +133,7 @@
 		0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				7C8250A607FB263900147948 /* ITFoundation.xcode */,
+				7C8250A607FB263900147948 /* ITFoundation.xcodeproj */,
 				1058C7B0FEA5585E11CA2CBB /* Linked Frameworks */,
 				1058C7B2FEA5585E11CA2CBB /* Other Frameworks */,
 			);
@@ -310,7 +310,7 @@
 			projectReferences = (
 				{
 					ProductGroup = 7C8250A807FB263B00147948 /* Products */;
-					ProjectRef = 7C8250A607FB263900147948 /* ITFoundation.xcode */;
+					ProjectRef = 7C8250A607FB263900147948 /* ITFoundation.xcodeproj */;
 				},
 			);
 			targets = (
@@ -359,7 +359,7 @@
 /* Begin PBXTargetDependency section */
 		7C8250BB07FB267400147948 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "ITFoundation (from ITFoundation.xcode)";
+			name = "ITFoundation (from ITFoundation.xcodeproj)";
 			targetProxy = 7C8250BA07FB267400147948 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
