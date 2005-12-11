@@ -45,7 +45,7 @@ NSAppleEventDescriptor *ITSendAEWithKey(FourCharCode reqKey, FourCharCode evClas
 }
 
 NSAppleEventDescriptor *ITSendAEWithString(NSString *sendString, FourCharCode evClass, FourCharCode evID, const ProcessSerialNumber *psn) {
-	ITSendAEWithStringAndTimeout(sendString, evClass, evID, psn, 60);
+	return ITSendAEWithStringAndTimeout(sendString, evClass, evID, psn, 60);
 }
 
 NSAppleEventDescriptor *ITSendAEWithStringAndTimeout(NSString *sendString, FourCharCode evClass, FourCharCode evID, const ProcessSerialNumber *psn, long timeout) {
