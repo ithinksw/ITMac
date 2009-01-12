@@ -4,10 +4,7 @@
  *
  *	Class that wraps Carbon ResourceManager resources of type 'STR '.
  *
- *	Copyright (c) 2005 by iThink Software.
- *	All Rights Reserved.
- *
- *	$Id$
+ *	Copyright (c) 2005 iThink Software
  *
  */
 
